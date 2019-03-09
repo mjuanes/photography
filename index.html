@@ -32,8 +32,8 @@ layout: default
 
             {% if image.name contains 'album' %}
                 {% if image.path contains 'fulls'%}
-                <article class="thumb" href="{{ site.baseurl }}/album.html">
-                    <a href="{{ site.baseurl }}/album.html" class="album">
+                <article class="thumb" href="{{ site.baseurl }}/albums/{{image.basename}}/album.html">
+                    <a href="{{ site.baseurl }}/albums/{{image.basename}}/album.html" class="album">
                         <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
                              data-name="{{ image.name }}"/></a>
                     <h2>AlbumH</h2>
