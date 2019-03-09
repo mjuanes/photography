@@ -18,28 +18,29 @@ layout: default
     <!-- Main -->
     <div id="main">
         {% for image in site.static_files %}
-        {% if image.path contains 'fulls'%}
-        {% unless image.path contains 'album' %}
-        <article class="thumb">
-            <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
-                     data-name="{{ image.name }}"/></a>
-            <!--<h2></h2>
-            <p></p>-->
-        </article>
-        {% endunless %}
-        {% endif %}
-        {% if image.name contains 'album' %}
-        {% if image.path contains 'fulls'%}
-        <article class="thumb" href="{{ site.baseurl }}/album.html">
-            <a href="{{ site.baseurl }}/album.html" class="album">
-                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
-                     data-name="{{ image.name }}"/></a>
-            <h2>AlbumH</h2>
-            <p>AlbumP</p>
-        </article>
-        {% endif %}
-        {% endif %}
+            {% if image.path contains 'fulls'%}
+                {% unless image.path contains 'album' %}
+                <article class="thumb">
+                    <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
+                        <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
+                             data-name="{{ image.name }}"/></a>
+                    <!--<h2></h2>
+                    <p></p>-->
+                </article>
+                {% endunless %}
+            {% endif %}
+
+            {% if image.name contains 'album' %}
+                {% if image.path contains 'fulls'%}
+                <article class="thumb" href="{{ site.baseurl }}/album.html">
+                    <a href="{{ site.baseurl }}/album.html" class="album">
+                        <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
+                             data-name="{{ image.name }}"/></a>
+                    <h2>AlbumH</h2>
+                    <p>AlbumP</p>
+                </article>
+                {% endif %}
+            {% endif %}
         {% endfor %}
     </div>
 
@@ -71,46 +72,46 @@ layout: default
                     <h2>Follow me on ...</h2>
                     <ul class="icons">
                         {% if site.social_urls.facebook %}
-                            <li>
-                                <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
-                                    <span class="label">Facebook</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.facebook }}" class="icon fa-facebook">
+                                <span class="label">Facebook</span>
+                            </a>
+                        </li>
                         {% endif %}
                         {% if site.social_urls.twitter %}
-                            <li>
-                                <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
-                                    <span class="label">Twitter</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.twitter }}" class="icon fa-twitter">
+                                <span class="label">Twitter</span>
+                            </a>
+                        </li>
                         {% endif %}
                         {% if site.social_urls.instagram %}
-                            <li>
-                                <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
-                                    <span class="label">Instagram</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.instagram }}" class="icon fa-instagram">
+                                <span class="label">Instagram</span>
+                            </a>
+                        </li>
                         {% endif %}
                         {% if site.social_urls.dribbble %}
-                            <li>
-                                <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
-                                    <span class="label">Dribbble</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.dribbble }}" class="icon fa-dribbble">
+                                <span class="label">Dribbble</span>
+                            </a>
+                        </li>
                         {% endif %}
                         {% if site.social_urls.github %}
-                            <li>
-                                <a href="{{ site.social_urls.github }}" class="icon fa-github">
-                                    <span class="label">GitHub</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.github }}" class="icon fa-github">
+                                <span class="label">GitHub</span>
+                            </a>
+                        </li>
                         {% endif %}
                         {% if site.social_urls.linkedin %}
-                            <li>
-                                <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
-                                    <span class="label">LinkedIn</span>
-                                </a>
-                            </li>
+                        <li>
+                            <a href="{{ site.social_urls.linkedin }}" class="icon fa-linkedin">
+                                <span class="label">LinkedIn</span>
+                            </a>
+                        </li>
                         {% endif %}
                     </ul>
                 </section>
