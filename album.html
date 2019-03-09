@@ -16,21 +16,9 @@ layout: default
     </header>
 
     <!-- Main -->
-    <div id="main">
-        {% for image in site.static_files %}
-            {% if image.path contains 'fulls'%}
-                {% if image.path contains 'album-pipa'%}
-            <article class="thumb">
-                <a href="{{ site.baseurl }}/albums/album-pipa/fulls/{{ image.name }}" class="image">
-                    <img src="{{ site.baseurl }}/albums/album-pipa/thumbs/{{ image.name }}" alt=""
-                         data-name="{{ image.name }}"/></a>
-                <!--<h2></h2>
-                <p></p>-->
-            </article>
-                {% endif %}
-            {% endif %}
-        {% endfor %}
-    </div>
+    <h1 id="main">
+        MARTI PUTO
+    </h1>
 
     <!-- Footer -->
     <footer id="footer" class="panel">
