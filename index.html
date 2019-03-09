@@ -18,7 +18,8 @@ layout: default
     <!-- Main -->
     <div id="main">
         {% for image in site.static_files %}
-        {% if image.path contains 'fulls' %}
+        {% if image.path contains 'fulls'%}
+        {% unless image.path contains 'album' %}
         <article class="thumb">
             <a href="{{ site.baseurl }}{{ site.image_fulls_loc }}/{{ image.name }}" class="image">
                 <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
@@ -26,6 +27,18 @@ layout: default
             <!--<h2></h2>
             <p></p>-->
         </article>
+        {% endunless %}
+        {% endif %}
+        {% if image.name contains 'album' %}
+        {% if image.path contains 'fulls'%}
+        <article class="thumb" href="{{ site.baseurl }}/album.html">
+            <a href="{{ site.baseurl }}/albums/{{image.basename }}/album.html" class="album">
+                <img src="{{ site.baseurl }}{{ site.image_thumbs_loc }}/{{ image.name }}" alt=""
+                     data-name="{{ image.name }}"/></a>
+            <h2>AlbumH</h2>
+            <p>AlbumP</p>
+        </article>
+        {% endif %}
         {% endif %}
         {% endfor %}
     </div>
